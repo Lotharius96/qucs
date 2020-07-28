@@ -166,6 +166,7 @@ class SchematicModel;
 class Element : public Object {
 public:
   Element();
+  Element(Element const&);
   virtual ~Element();
 
 public: // make old variables accessible
@@ -218,7 +219,7 @@ protected:
   bool isSelected() const{return Selected;}
 
 private:
-  bool Selected;
+  bool Selected; // BUG
 public: // BUG
   int  Type;    // whether it is Component, Wire, ...
 

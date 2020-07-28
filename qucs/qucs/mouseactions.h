@@ -48,6 +48,7 @@ public:
 	cmd* handle(QEvent*);
 
 	virtual cmd* activate(QAction* sender);
+	virtual cmd* deactivate();
 // private: TODO
 	// TODO: only use POS in those
 	virtual cmd* move(QEvent*) { return nullptr; }
